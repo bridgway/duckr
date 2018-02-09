@@ -97,8 +97,8 @@ export function postReply (duckId, reply) {
 	}
 }
 
-// export function fetchReplies (duckId) {
-//   return ref.child(`replies/${duckId}`).once('value')
-//     .then((snapshot) => snapshot.val() || {})
-// }
+export function fetchReplies (duckId) {
+  return ref.child(`replies/${duckId}`).once('value')
+    .then((snapshot) => snapshot.val() || {})
+}
 
