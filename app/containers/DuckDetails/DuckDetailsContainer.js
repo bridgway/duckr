@@ -46,9 +46,9 @@ function mapStateToProps({ ducks, likeCount, users }, props) {
   return {
     duckId,
     authedUser: users[users.authedId].info,
-    isFetching: ducks.isFetching || likeCount.isFetching,
-    error: ducks.error,
-    duckAlreadyFetched: !!ducks[duckId],
+    isFetching: ducks.get('isFetching') || likeCount.isFetching,
+    error: ducks.get('error'),
+    duckAlreadyFetched: !!ducks.get(duckId),
   }
 }
 
